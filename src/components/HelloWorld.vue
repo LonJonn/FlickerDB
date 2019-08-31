@@ -77,65 +77,32 @@
 				</a>
 			</li>
 		</ul>
-		<h3>Ecosystem</h3>
-		<ul>
-			<li>
-				<a
-					href="https://router.vuejs.org"
-					target="_blank"
-					rel="noopener"
-				>
-					vue-router
-				</a>
-			</li>
-			<li>
-				<a href="https://vuex.vuejs.org" target="_blank" rel="noopener">
-					vuex
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://github.com/vuejs/vue-devtools#vue-devtools"
-					target="_blank"
-					rel="noopener"
-				>
-					vue-devtools
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://vue-loader.vuejs.org"
-					target="_blank"
-					rel="noopener"
-				>
-					vue-loader
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://github.com/vuejs/awesome-vue"
-					target="_blank"
-					rel="noopener"
-				>
-					awesome-vue
-				</a>
-			</li>
-		</ul>
+		<pre style="text-align: left; width: 30%; margin: 0 auto;">{{
+			users
+		}}</pre>
 	</div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import { db } from "../firebase";
 
 export default Vue.extend({
 	name: "HelloWorld",
 	props: {
 		msg: String
+	},
+	data() {
+		return {
+			users: []
+		};
+	},
+	firestore: {
+		users: db.collection("users")
 	}
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
 	margin: 40px 0 0;
