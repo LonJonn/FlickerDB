@@ -27,6 +27,7 @@
 		"eslint-plugin-prettier": "^3.1.0",
 		"eslint-plugin-vue": "^5.0.0",
 		"prettier": "^1.18.2",
+		"tailwindcss": "^1.1.2",
 		"typescript": "^3.4.3",
 		"vue-template-compiler": "^2.6.10"
 	},
@@ -47,7 +48,8 @@
 	},
 	"postcss": {
 		"plugins": {
-			"autoprefixer": {}
+			"autoprefixer": {},
+			"tailwindcss": "tailwind.js"
 		}
 	},
 	"browserslist": [

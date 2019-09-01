@@ -6,6 +6,8 @@ import store from "./store";
 import { firestorePlugin } from "vuefire";
 Vue.use(firestorePlugin);
 
+import "@/assets/css/tailwind.css";
+
 new Vue({
 	router,
 	store,
